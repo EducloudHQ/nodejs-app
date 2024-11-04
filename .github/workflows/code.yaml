@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Install express
-        run: npm install express
+        run: npm i --save-dev @types/express
 
       - name: Build the project
         run: tsc --project tsconfig.json
