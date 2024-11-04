@@ -63,9 +63,7 @@ name: AWS Service CI/CD
 on:
   push:
     branches: 
-      - main
-  # pull_request:
-  #   branches: [main]
+      - infra
 
 jobs:
   build:
@@ -93,7 +91,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: "us-east-1"
       - name: Deploy to AWS
-        run: cdk deploy CdkHelloWorldStack
+        run: cdk deploy InfraStructureStack
       
       - name: Retrieve ALB DNS name
         id: alb_dns
