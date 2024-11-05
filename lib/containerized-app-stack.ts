@@ -8,7 +8,7 @@ import * as ecr from "aws-cdk-lib/aws-ecr"
 import { HttpAlbIntegration } from 'aws-cdk-lib/aws-apigatewayv2-integrations';
 export const PREFIX = "eda-ecs";
 
-export class InfraStructureStack extends cdk.Stack {
+export class ContainerizedAppStack extends cdk.Stack {
   constructor(scope: Construct, id: string, ecrRepository: ecr.Repository, props?: cdk.StackProps) {
     super(scope, id, props);
 
