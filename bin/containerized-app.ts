@@ -9,5 +9,5 @@ const app = new cdk.App();
 const repoStack = new RepositoryStack(app, "repoStack", {
   // env: { account, region },
 })
-new ContainerizedAppStack(app, 'InfraStructureStack', repoStack.repository, {
+new ContainerizedAppStack(app, 'InfrastructureStack', repoStack.repository, {
 });
